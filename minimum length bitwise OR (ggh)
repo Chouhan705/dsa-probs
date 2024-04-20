@@ -1,0 +1,64 @@
+import java.util.*;
+
+class gh
+{
+    public static void main(String args[])
+    {
+        
+        int q[] = new int [2];
+        int n , j, i=999 , val , indx;
+        System.out.println("enter n");
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        int a[] = new int[n];
+        System.out.println("enter array");
+        for(j=0;j<n;j++)
+        {
+            a[j] = sc.nextInt();
+        }
+        System.out.println("Enter Q");
+        for (j=0;j<2;j++)
+        {
+            q[j] = sc.nextInt();
+        }
+        indx = q[0];
+        val = q[1];
+        int sum = a[0];
+        for(j=0;j<n;j++)
+        {
+            System.out.println(sum);
+            if(j>indx|| j==indx)
+            {
+                if(sum>val|| sum==val)
+                {
+                    i=j+1;
+                    
+                    break;
+                }
+                else
+                {
+                    i=-1;
+                }
+            }
+            else
+            {
+                i=-1;
+            }
+            if(indx==n)
+            {
+                if(sum>val||sum==val)
+                {
+                    i=indx;
+                }
+            }
+            else
+            {
+                i=-1;
+            }
+            
+        }
+        System.out.println("index is "+i);
+        
+
+    }
+}
